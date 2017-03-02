@@ -1,4 +1,8 @@
-<!doctype html>
+<?php
+session_start();
+ include('php/isLogin.php');
+ ?>
+ <!doctype html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -9,8 +13,22 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <script src="js/vendor/modernizr.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+  $( function() {
+    var availableTags = [
+      "Kita 01",
+      "Kita 02",
+      "Kita 03",
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
   </head>
-  <body>
+  <body id="profile">
 <!-- nav -->
 <section class="navigation">
   <nav class="top-bar row" data-topbar role="navigation">
@@ -42,25 +60,84 @@
 </section>
 <!-- nav -->
 
-<section class="the-search">
+<section class="profile-container">
   <div class="row">
-    <div class="small-12">
-      <h2 class="search-title text-center">Search a kita near you:</h2>
-    </div>
-    <div class="small-12 large-6 large-centered columns">
-        <input class="adress-input" type="text" placeholder="Mitte, Berlin" id="live_search_input"/>
-          <a href="" class="main-search-button" id="big-search-submit">Search</a>
-          <div id="quick_search_results"></div>
-    </div>
-  </div>
+    <div class="small-12 medium-12 columns profile-tabs">
+      <ul class="tabs" data-tab>
+        <li class="tab-title active"><a href="#panel1"><h3>Personal details:</h3></a></li>
+        <li class="tab-title "><a href="#panel2"><h3>My Places</h3></a></li>
+      </ul>
+
+      <div class="tabs-content">
+        <div class="content active" id="panel1">
+          <form>
+            <div class="row">
+              <div class="large-12 columns">
+                <label>First name
+                  <input type="text" placeholder="First name" />
+                </label>
+              </div>
+              <div class="large-12 columns">
+                <label>Last name
+                <input type="text" placeholder="Last name" />
+                </label>
+              </div>
+              <div class="small-12 large-4 columns">
+                <div class="profile-img-upload">
+                </div>
+                <a href="#" class="grey-button"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp Browse</a>
+              </div>
+              <div class="large-12 columns">
+                <label>E-mail
+                <input type="text" placeholder="E-mail" />
+                </label>
+              </div>
+              <div class="large-12 columns">
+                <label>password
+                <input type="text" placeholder="*********" />
+                </label>
+              </div>
+              <div class="large-12 columns">
+                <label>more details
+                <textarea placeholder="add some more details"></textarea>
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-12 columns">
+                <a href="add.html" class="purp-button">Save Changes</a>
+              </div>
+            </div> 
+          </form>
+        </div>
+        <div class="content" id="panel2">
+          <div class="list-item small-12 columns" id="listing-header">
+              <div class="small-12 medium-4 columns">
+                  <a href="item.html" class="listing-adress">
+                    <span class="list-item-name">Kita varthestrase</span>
+                    <span class="list-item-adress">Nogatstr. 19/20 12051 Berlin</span>
+                  </a>
+                </div>
+                <div class="small-12 medium-4 medium-end columns text-right list-item-right-details">
+                  <span class="item-comment-count">
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                    <a href="">3</a>
+                  </span>
+                  <span class="item-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <span class="list-item-avg-rating"><a href="">4.5</a></span>
+                  </span>
+                </div>
+            </div>
+          </div>      
+      </div>
 </section>
 
-<section class="row">
-
-</section>
-    
-
-    <!-- check sign up modal -->
+<!-- check sign up modal -->
   <div id="reply-modal-check-sign" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <div class="modal-header"><h4 class="text-center">Add a review</h4></div>
       <a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -109,11 +186,11 @@
           <form class="log-in-modal-form">
             <div class="row">
               <div class="large-12 columns">
-                <input type="text" id="login_email" placeholder="Email" />
+                <input type="text" placeholder="First name" />
               </div>
               <div class="large-12 columns">
-                <input type="text"  id="login_password"  placeholder="Password" />
-                <div id="loginAccount" class="purp-button">Log In</div>
+                <input type="text" placeholder="Password" />
+                <a href="add.html" data-reveal-id="review-modal" class="purp-button">Log In</a>
               </div>
           </form>
         </div>
@@ -128,28 +205,28 @@
           <div class="row">
             <div class="large-12 columns">
               <label>First name
-                <input type="text" placeholder="First name" id="signup_first_name"/>
+                <input type="text" placeholder="First name" />
               </label>
             </div>
             <div class="large-12 columns">
               <label>Last name
-                <input type="text" placeholder="Last name"  id="signup_last_name" />
+                <input type="text" placeholder="Last name" />
               </label>
             </div>
             <div class="large-12 columns">
               <label>E-mail
-                <input type="text" placeholder="E-mail"  id="signup_email"/>
+                <input type="text" placeholder="E-mail" />
               </label>
             </div>
             <div class="large-12 columns">
               <label>password
-                <input type="text" placeholder="*********"  id="signup_password"/>
+                <input type="text" placeholder="*********" />
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-             <div id="signUpAccount" class="purp-button">Sign up</div>
+              <a href="add.html" class="purp-button">Sign up</a>
             </div>
           </div>  
         </form>
@@ -158,11 +235,9 @@
       <a class="close-reveal-modal" aria-label="Close">&#215;</a>
     </div>
 <!-- sign with mail modal -->
+    
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
-    <script src="js/world_docReady.js"></script>
-    <script src="js/quick_search.js"></script>
-    <script src="js/signup.js"></script>
     <script>
       $(document).foundation();
     </script>
