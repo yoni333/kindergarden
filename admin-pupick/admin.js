@@ -157,6 +157,7 @@ function open_edit_gardem_modal( id ,row ){
        $('#editGardenModal #admin_edit_city').val(data.city);
        $('#editGardenModal #admin_edit_country').val(data.country);
        $('#editGardenModal #admin_edit_working_hours').val(data.working_hours);
+       $('#editGardenModal #admin_new_contact').val(data.contact);
        $('#editGardenModal #admin_edit_description').val(data.description);
       
       

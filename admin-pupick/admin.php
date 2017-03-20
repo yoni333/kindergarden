@@ -60,7 +60,7 @@ include('login_check.php');
 <section class="admin-add">
   <div class="row">
   <div class="small-12 columns">
-      <h3>Listings</h3> <u><a href="#" data-reveal-id="myModal">insert new kindergarden</a></u>
+      <h3>Listings</h3> <u><button href="#" data-reveal-id="myModal" class="btn btn-danger">insert new kindergarden</button></u>
     <table id="active_table_admin" >
       <thead>
             <!--
@@ -122,6 +122,8 @@ include('login_check.php');
       <input type="text"  id="admin_new_country" name="country" >
       working hours:
       <input type="text" id="admin_new_working_hours"  name="working_hours" >
+     kindergarden contant details:
+      <input type="text" id="admin_new_contact"  name="contact" >
       description:
       <textarea type="text"  id="admin_new_description" name="description" ></textarea>
 
@@ -150,6 +152,8 @@ include('login_check.php');
       <input type="text"  id="admin_edit_country" name="country" >
       working hours:
       <input type="text" id="admin_edit_working_hours"  name="working_hours" >
+       kindergarden contant details:
+      <input type="text" id="admin_new_contact"  name="contact" >
       description:
       <textarea type="text"  id="admin_edit_description" name="description" ></textarea>
 

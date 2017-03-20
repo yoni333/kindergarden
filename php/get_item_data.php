@@ -4,7 +4,9 @@ session_start();
 include('main.php');
 include('database_world.php');
 
-class live_search {
+
+
+class full_item_data {
     
     private $_dbh;
     private $SQL;
@@ -35,40 +37,58 @@ class live_search {
     public function get_search_list(){
         
         //TODO aproove the like condition
-        $this->SQL = "SELECT id ,name , adress , city FROM kindergardens"
-                . "  WHERE name LIKE '" . $this->insert_search . "%'" 
-                . " or city LIKE  '" . $this->insert_search . "%'" ;
+        $this->SQL = "SELECT * FROM kindergardens  WHERE id = '$this->insert_search';"  ;
         
         $this->selecet_query();
         return $this->results;
         
     }
     
-    public function set_insert_search( $insert_search ){
+    public function set_insert_search(  ){
         
-        if ( $insert_search !== '' ) {
+        $valid =  false;
+        if ( isset($_GET['id']) && !empty($_GET['id']) ) {
+        
+            $insert_search = $_GET['id'];
             
-             $this->insert_search = $insert_search;
-       
-            
-        } else {
-            echo "you must insert string" ; 
-            die();
+            if ( is_numeric($insert_search) ) {
+
+                 $this->insert_search = $insert_search;
+                  $valid =  true;
+
+            } 
             
         }
-       
+        
+        if ( !$valid) {
+            
+            $newURL = 'http://pupick.de/app-pupick/index.html';
+                header('Location: '.$newURL);
+              //  echo "you must insert string" ; 
+            
+            
+                die();
+
+           
+            
+        }
     }
     
 } //end class
 
-$insert_search = $_POST['search'];
-
-$live_search = new live_search();
-
-$live_search->set_insert_search( $insert_search );
-
-$list = $live_search->get_search_list();
 
 
+$full_item_data = new full_item_data();
+
+$full_item_data->set_insert_search(  );
+
+
+$kindergarden = $full_item_data->get_search_list();
+
+$kindergarden = $kindergarden[0];
+
+/*
 header('Content-Type: application/json');
         echo json_encode( $list );
+ * 
+ */

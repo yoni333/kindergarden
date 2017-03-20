@@ -15,6 +15,7 @@ $tmp[count($tmp)] = $_POST['adress'];
 $tmp[count($tmp)] = $_POST['city'];
 $tmp[count($tmp)] = $_POST['country'];
 $tmp[count($tmp)] = $_POST['working_hours'];
+$tmp[count($tmp)] = $_POST['contact'];
 $tmp[count($tmp)] = $_POST['description'];
 $tmp[count($tmp)] = $name_of_inserter;
 $tmp[count($tmp)] = '0';

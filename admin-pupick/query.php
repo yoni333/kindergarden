@@ -57,7 +57,7 @@ class query_admin {
     
     public function insert_kindergarden(){
     
-        $this->SQL = "INSERT INTO kindergardens ( `activate`,`name`, `adress` , `city`, `country`, `working_hours`, `description`,  `inserted_by_name`, `inserted_by_id`) VALUES (?,?,?,?,?,?,?,?,?)";
+        $this->SQL = "INSERT INTO kindergardens ( `activate`,`name`, `adress` , `city`, `country`, `working_hours`, `contact` , `description`,  `inserted_by_name`, `inserted_by_id`) VALUES (?,?,?,?,?,?,?,?,?,?)";
         $stmt = $this->_dbh->prepare( $this->SQL );
             
       echo $this->SQL;
@@ -85,6 +85,7 @@ class query_admin {
                 city=?,
                 country=?,
                 working_hours=?,
+                contact=?,
                 description=?,
                 editBy=?
               

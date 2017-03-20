@@ -21,11 +21,12 @@ $( document ).ready(function() {
         if(inputVal.length){
             $.post("php/live_search.php", {search: inputVal}).done(function(data){
                 // Display the returned data in browser
+                console.log('quick serch results');
                 console.log(data);
                 var showResults = '<ul>';
                 $.each(data,function(index,obj){
                     
-                    showResults += '<li><a href="">' + obj.name + ' , ' + obj.city + ' , ' + obj.adress + '</a>' +'</li>';
+                    showResults += '<li><a href="item.php?id='+obj.id+'" data-sOBJ="'+index+'" data-DB-ID="'+obj.id+'"class="a-quickresults">' + obj.name + ' , ' + obj.city + ' , ' + obj.adress + '</a>' +'</li>';
                     
                 });
                 showResults += '</ul>';
@@ -38,9 +39,16 @@ $( document ).ready(function() {
     });
     
     // Set search input value on click of result item
-    $(document).on("click", ".result p", function(){
-        $(this).parents(".search-box").find('input[type="text"]').val($(this).text());
-        $(this).parent(".result").empty();
+    $(document).on("click", ".a-quickresults", function(){
+       
+       var id = $(this).attr('data-sOBJ');
+       console.log('id = ' + id);
+       
+       var database_id = $(this).attr('data-DB-ID');
+         window.location = window.location.origin + window.location.pathname + 'item.php?id='+database_id;
+       
+       
+       
     });
   
   

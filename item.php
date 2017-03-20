@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+//include('main.php');
+//include('isLogin.php');
+
+include('php/get_item_data.php');
+
+//print_r($kindergarden);
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -82,8 +94,8 @@
   <div class="small-12 columns clearfix">
     <div class="small-12 medium-4 left">
             <a href="" class="listing-adress">
-              <span class="list-item-name">Kita varthestrase</span>
-              <span class="list-item-adress">Nogatstr. 19/20 12051 Berlin
+              <span class="list-item-name" id="item_kindergarden_name"><?php echo $kindergarden['name'];?> </span>
+              <span class="list-item-adress"><?php echo $kindergarden['adress'];?> , <?php echo $kindergarden['city'];?> , <?php echo $kindergarden['country'];?>
               </span>
             </a>
             <a href="" data-reveal-id="show-map-modal" class="show-on-map">more info <i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -116,16 +128,15 @@
     
     <div class="small-12 medium-3 columns">
       <h5>About this place:</h5>
-      <p class="small-p">About this place:That being said, the feature built into an existing platform already in use is going to be huge for gaining marketshare. We've also used Zoom, Skype, and most recently UberConference for when latency is an issue to separate out voice/video. Going to be really nice for internal.</p>
+      <p class="small-p">
+        
+          <?php echo $kindergarden['description'];?>
+                </p>
     </div>
     <div class="small-12 medium-3 columns">
       <h5>Opening Times:</h5>
       <p class="small-p">
-      Su - Th 10:00 - 16:00
-      <br>
-      Su - Fr  10:00 - 16:00
-      <br>
-      Sat        Closed
+          <?php echo $kindergarden['working_hours'];?> 
       </p>
     </div>
     <div class="small-12 medium-3 columns">
@@ -135,11 +146,7 @@
     <div class="small-12 medium-3 columns">
       <h5>Contact details:</h5>
       <p class="small-p">
-      Su - Th 10:00 - 16:00
-      <br>
-      Su - Fr  10:00 - 16:00
-      <br>
-      Sat        Closed
+      <?php echo $kindergarden['contact'];?> 
       </p>
       <a href="#" class="grey-button listing-action-button"><i class="fa fa-phone" aria-hidden="true"></i></i>&nbsp Contact</a>
     </div>
