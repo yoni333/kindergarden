@@ -12,6 +12,7 @@ class full_item_data {
     private $SQL;
     private $insert_search;
     private $results;
+    private $reviews;
     
     public function __construct(){
         $db = DB_connection_world::getInstance();
@@ -28,7 +29,7 @@ class full_item_data {
                     $this->results[] = $row;
                 }
             /*** close the database connection ***/
-            $this->_dbh = null;
+           
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
@@ -41,6 +42,28 @@ class full_item_data {
         
         $this->selecet_query();
         return $this->results;
+        
+    }
+    
+    public function get_reviews_list(){
+        
+        //TODO create join table with user id
+        $this->SQL = "SELECT * FROM feedbacks  WHERE kindergardem_id = '$this->insert_search';"  ;
+        
+         try {
+            /*** The SQL SELECT statement ***/
+           $results = $this->_dbh->query( $this->SQL );
+           $this->reviews =[];
+             while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
+                    $this->reviews[] = $row;
+                }
+            /*** close the database connection ***/
+           
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+        
+        return $this->reviews;
         
     }
     
@@ -74,6 +97,11 @@ class full_item_data {
         }
     }
     
+     function close_db(){
+         /*** close the database connection ***/
+            $this->_dbh = null;
+        
+    }
 } //end class
 
 
@@ -84,6 +112,10 @@ $full_item_data->set_insert_search(  );
 
 
 $kindergarden = $full_item_data->get_search_list();
+
+$reviews = $full_item_data->get_reviews_list();
+
+$full_item_data->close_db();
 
 $kindergarden = $kindergarden[0];
 

@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
     
     
-    $('#loginAccount').on("click",function(){
+    $('.loginAccount').on("click",function(){
         
         console.log ('click on #loginAccount');
        var  data ={};
@@ -80,7 +80,22 @@ function login_ajax(data){
       
     
         if ( response ==='we_login') {
-            window.location.href = 'http://pupick.de/app-pupick/profile.php';
+            
+            var page = window.location.pathname ;
+            page = page.substring(page.lastIndexOf('/')+1);
+            switch (page){
+                
+                    case 'index.html':
+                        window.location.href = 'http://pupick.de/app-pupick/profile.php';
+
+                  break;
+
+                   case 'item.php':
+                         $('#review-modal').foundation('reveal', 'open');
+                   break;  
+               
+            }
+          
         }else {
             
          alert ('Wrong Email or Password ');

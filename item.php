@@ -94,6 +94,7 @@ include('php/get_item_data.php');
   <div class="small-12 columns clearfix">
     <div class="small-12 medium-4 left">
             <a href="" class="listing-adress">
+                <input type="hidden" value="<?php echo $kindergarden['id'];?>" id="kindergerdenID">
               <span class="list-item-name" id="item_kindergarden_name"><?php echo $kindergarden['name'];?> </span>
               <span class="list-item-adress"><?php echo $kindergarden['adress'];?> , <?php echo $kindergarden['city'];?> , <?php echo $kindergarden['country'];?>
               </span>
@@ -237,14 +238,18 @@ include('php/get_item_data.php');
 
 <section class="listing-reviews row">
   <div class="reviews-container small-12 columns">
-    <h3>1 Reviews:</h3>
+      <?php //print_r($reviews);?>
+    <h3><?php echo count($reviews);?> Reviews:</h3>
   </div>
+    
+   <?php foreach($reviews as $key=>$value) { ?>
   <div class="single-review small-12 medium-8 columns end">
     <div class="reviewer-details">
       <img src="img/avatar/avatar3.jpg">
-      <a href="">Bary White</a>
+      <a href=""><?php echo $value['user_id'] ;?></a>
     </div>
-    <p>is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    <p>
+        <?php echo $value['feddback'] ;?>
     </p>
     <div class="up-down-vote-container">
       <a href=""><i class="fa fa-caret-up" aria-hidden="true"></i><span class="review-up-down-number">23</span></a>
@@ -257,6 +262,9 @@ include('php/get_item_data.php');
     </div>
   -->
   </div>
+    
+   <?php } ?>
+    
 </section>
 
 <!-- Review modal -->
@@ -277,9 +285,9 @@ include('php/get_item_data.php');
           <div class="small-12 columns">
             <h4>What do you think about this place?</h4>
               <label>
-                <textarea class="add-review-text-area" placeholder="Enter your review here:"></textarea>
+                <textarea id ="add-review-on-graden-text" class="add-review-text-area" placeholder="Enter your review here:"></textarea>
               </label>
-              <a class="purp-button" href="">Submit review</a>
+            <button id="add-review-on-graden" class="purp-button">Submit review</button>
             </div>
           </div>
       <a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -335,11 +343,12 @@ include('php/get_item_data.php');
           <form class="log-in-modal-form">
             <div class="row">
               <div class="large-12 columns">
-                <input type="text" placeholder="First name" />
+                <input type="text" id="login_email" placeholder="Email" />
               </div>
               <div class="large-12 columns">
-                <input type="text" placeholder="Password" />
-                <a href="add.html" data-reveal-id="review-modal" class="purp-button">Log In</a>
+                <input type="text"  id="login_password"  placeholder="Password" />
+                <div id="loginAccount" class="purp-button loginAccount">Log In</div>
+              </div>
               </div>
           </form>
         </div>
@@ -402,6 +411,9 @@ include('php/get_item_data.php');
     <script>
       $(document).foundation();
     </script>
+    
+      <script src="js/signup.js"></script>
+    <script src="js/add-review-on-graden.js"></script>
   </body>
 </html>
 

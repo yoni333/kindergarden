@@ -54,7 +54,8 @@ class LoginAccount {
      function check_email_exist(){
         
         //TODO aproove the like condition
-        $this->SQL = "SELECT private_name,family_name ,email,password FROM users"
+         //TODO syntize the query
+        $this->SQL = "SELECT id,private_name,family_name ,email,password FROM users"
                 . "  WHERE email = '" . $this->params['email'] . "';"   ;
              
         
@@ -106,8 +107,9 @@ class LoginAccount {
     function success_login(){
          
         $_SESSION['isLogin'] = 'login';
-        $_SESSION['private_name'] = $this->results['private_name'];
-        $_SESSION['family_name'] = $this->results['family_name'];
+        $_SESSION['private_name'] = $this->results[0]['private_name'];
+        $_SESSION['family_name'] = $this->results[0]['family_name'];
+        $_SESSION['userID'] = $this->results[0]['id'];
       
         $this->close_db();
         
