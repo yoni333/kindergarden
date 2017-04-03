@@ -1,0 +1,247 @@
+[14-Jan-2017 20:52:10 Asia/Jerusalem] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/index.php:7) in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/index.php on line 28
+[14-Jan-2017 21:03:24 Asia/Jerusalem] PHP Fatal error:  Function name must be a string in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/admin.php on line 2
+[14-Jan-2017 21:13:00 Asia/Jerusalem] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/index.php:29) in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/index.php on line 50
+[14-Jan-2017 21:13:28 Asia/Jerusalem] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/index.php:29) in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/index.php on line 50
+[14-Jan-2017 21:13:30 Asia/Jerusalem] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/index.php:29) in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/index.php on line 50
+[14-Jan-2017 21:34:25 Asia/Jerusalem] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/index.php:29) in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/index.php on line 50
+[15-Jan-2017 23:55:11 Asia/Jerusalem] PHP Warning:  include(login_check): failed to open stream: No such file or directory in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 4
+[15-Jan-2017 23:55:11 Asia/Jerusalem] PHP Warning:  include(login_check): failed to open stream: No such file or directory in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 4
+[15-Jan-2017 23:55:11 Asia/Jerusalem] PHP Warning:  include(): Failed opening 'login_check' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 4
+[15-Jan-2017 23:55:11 Asia/Jerusalem] PHP Warning:  include(database_connection): failed to open stream: No such file or directory in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 5
+[15-Jan-2017 23:55:11 Asia/Jerusalem] PHP Warning:  include(database_connection): failed to open stream: No such file or directory in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 5
+[15-Jan-2017 23:55:11 Asia/Jerusalem] PHP Warning:  include(): Failed opening 'database_connection' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 5
+[15-Jan-2017 23:55:11 Asia/Jerusalem] PHP Fatal error:  Class 'DB_connection' not found in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 14
+[15-Jan-2017 23:55:56 Asia/Jerusalem] PHP Warning:  include(login_check): failed to open stream: No such file or directory in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/admin.php on line 4
+[15-Jan-2017 23:55:56 Asia/Jerusalem] PHP Warning:  include(login_check): failed to open stream: No such file or directory in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/admin.php on line 4
+[15-Jan-2017 23:55:56 Asia/Jerusalem] PHP Warning:  include(): Failed opening 'login_check' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/admin.php on line 4
+[15-Jan-2017 23:56:29 Asia/Jerusalem] PHP Warning:  include(login_check): failed to open stream: No such file or directory in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/database_connection.php on line 4
+[15-Jan-2017 23:56:29 Asia/Jerusalem] PHP Warning:  include(login_check): failed to open stream: No such file or directory in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/database_connection.php on line 4
+[15-Jan-2017 23:56:29 Asia/Jerusalem] PHP Warning:  include(): Failed opening 'login_check' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/database_connection.php on line 4
+[15-Jan-2017 23:56:29 Asia/Jerusalem] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 43
+[15-Jan-2017 23:56:39 Asia/Jerusalem] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 43
+[15-Jan-2017 23:58:11 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:52
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(52): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(64): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 52
+[15-Jan-2017 23:59:34 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''kindergardens' ( 'name', 'adress' , 'city', 'country', 'working_hours', 'descri' at line 1' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:52
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(52): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(64): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 52
+[16-Jan-2017 00:00:49 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''name', 'adress' , 'city', 'country', 'working_hours', 'description',  'inserted' at line 1' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:52
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(52): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(64): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 52
+[16-Jan-2017 00:10:38 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:52
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(52): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(64): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 52
+[16-Jan-2017 00:12:40 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:52
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(52): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(64): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 52
+[16-Jan-2017 00:12:57 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:52
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(52): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(64): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 52
+[16-Jan-2017 00:13:48 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:52
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(52): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(64): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 52
+[16-Jan-2017 00:25:01 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'inserted_by_name' cannot be null' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(11): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 00:25:51 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'inserted_by_name' cannot be null' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(11): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:20:53 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(23): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:21:05 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(23): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:22:16 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(23): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:24:59 Asia/Jerusalem] PHP Fatal error:  Cannot use [] for reading in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php on line 9
+[16-Jan-2017 01:25:25 Asia/Jerusalem] PHP Fatal error:  Cannot use [] for reading in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php on line 9
+[16-Jan-2017 01:25:46 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(24): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:28:17 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(24): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:28:24 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(24): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:29:05 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(24): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:29:36 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(24): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:30:01 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(24): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:30:30 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(25): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:31:24 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(25): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[16-Jan-2017 01:32:12 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(25): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[19-Jan-2017 01:03:19 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(25): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[19-Jan-2017 01:04:05 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(25): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[19-Jan-2017 01:06:30 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:69
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(69): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(25): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 69
+[19-Jan-2017 01:08:14 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:71
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(71): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(25): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 71
+[19-Jan-2017 01:08:40 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:71
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(71): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(25): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 71
+[19-Jan-2017 01:09:01 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:71
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(71): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_insert_kindergarden.php(25): query_admin->insert_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 71
+[07-Feb-2017 16:23:52 Asia/Jerusalem] PHP Fatal error:  Using $this when not in object context in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/get_all_kindergarden.php on line 23
+[07-Feb-2017 16:24:14 Asia/Jerusalem] PHP Fatal error:  Using $this when not in object context in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/get_all_kindergarden.php on line 23
+[07-Feb-2017 19:40:25 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:101
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(101): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_edit_kindergarden.php(26): query_admin->update_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 101
+[07-Feb-2017 19:40:51 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:101
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(101): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_edit_kindergarden.php(26): query_admin->update_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 101
+[07-Feb-2017 19:41:09 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:101
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(101): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_edit_kindergarden.php(26): query_admin->update_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 101
+[07-Feb-2017 19:41:12 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:101
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(101): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_edit_kindergarden.php(26): query_admin->update_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 101
+[07-Feb-2017 19:43:34 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:101
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(101): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_edit_kindergarden.php(26): query_admin->update_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 101
+[07-Feb-2017 19:43:47 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:101
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(101): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_edit_kindergarden.php(26): query_admin->update_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 101
+[07-Feb-2017 19:46:07 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:103
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(103): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_edit_kindergarden.php(26): query_admin->update_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 103
+[07-Feb-2017 19:46:56 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:103
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(103): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_edit_kindergarden.php(26): query_admin->update_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 103
+[07-Feb-2017 19:47:22 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:103
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(103): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_edit_kindergarden.php(26): query_admin->update_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 103
+[07-Feb-2017 20:25:26 Asia/Jerusalem] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php:104
+Stack trace:
+#0 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php(104): PDOStatement->execute(Array)
+#1 /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/ajax_admin_edit_kindergarden.php(27): query_admin->update_kindergarden()
+#2 {main}
+  thrown in /home/webkoinf/public_html/pupick.de/app-pupick/admin-pupick/query.php on line 104
