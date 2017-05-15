@@ -6,6 +6,7 @@ session_start();
 
 include('php/get_item_data.php');
 
+
 //print_r($kindergarden);
 ?>
 
@@ -24,17 +25,10 @@ include('php/get_item_data.php');
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-  $( function() {
-    var availableTags = [
-      "Kita 01",
-      "Kita 02",
-      "Kita 03",
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  } );
-  </script>
+         window.user_id = <?php echo $_SESSION['userID'] ;?>;
+         window.private_name = '<?php echo $_SESSION['private_name'] ;?>';
+         window.family_name = '<?php echo $_SESSION['family_name'] ;?>';
+    </script>
   </head>
   <body id="">
 <!-- nav -->
@@ -54,8 +48,13 @@ include('php/get_item_data.php');
         <li><a class="" href="admin.html">Admin</a></li>
         <li><a class="" href="profile.html">Profile</a></li>
         <li><a class="but" href="review.html">Review a kita</a></li>
+        <?php if ($_SESSION['isLogin']  !== 'login' ){ ?>
         <li><a data-reveal-id="sign-up-modal" id="nav-sign-up" href="">Sign Up</a></li>
         <li><a data-reveal-id="login-modal" id="nav-login" href=""><i class="fa fa-user" aria-hidden="true"></i>&nbsp Login</a></li>
+         <li id="nav-signout" style="display:none;"><a  href="php/signout.php">SignOut</a></li>
+        <?php } else { ?>
+          <li id="nav-signout"><a  href="php/signout.php">SignOut</a></li>
+        <?php } ?>
       </ul>
 
       <!-- Left Nav Section -->
@@ -116,8 +115,17 @@ include('php/get_item_data.php');
                 <span class="list-item-avg-rating"><a href="">4.5</a></span>
             </span>
             <a href="#" class="grey-button listing-action-button"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save</a>
+            
+            <?php if ($_SESSION['isLogin']  === 'login' ){ ?>
+              <a href="" data-reveal-id="review-modal" class="purp-button listing-action-button">
+              <i class="fa fa-pencil" aria-hidden="true"></i>&nbsp  Add a review</a>
+            <?php } else { ?>
+            
             <a href="" data-reveal-id="reply-modal-check-sign" class="purp-button listing-action-button">
               <i class="fa fa-pencil" aria-hidden="true"></i>&nbsp  Add a review</a>
+            
+            
+            <?php }?>
           </div>
       </div>    
 
@@ -142,7 +150,8 @@ include('php/get_item_data.php');
     </div>
     <div class="small-12 medium-3 columns">
       <h5>Location:</h5>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9722.245018162283!2d13.43526645!3d52.4689729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1483543819795" frameborder="0" width="100%" style="border:0" allowfullscreen></iframe>
+      <!-- google maps iframe -->
+     <?php echo urldecode($kindergarden['google_maps']);?> 
     </div>
     <div class="small-12 medium-3 columns">
       <h5>Contact details:</h5>
@@ -242,11 +251,13 @@ include('php/get_item_data.php');
     <h3><?php echo count($reviews);?> Reviews:</h3>
   </div>
     
+    <div id="reviewsDiv">
    <?php foreach($reviews as $key=>$value) { ?>
+    
   <div class="single-review small-12 medium-8 columns end">
     <div class="reviewer-details">
       <img src="img/avatar/avatar3.jpg">
-      <a href=""><?php echo $value['user_id'] ;?></a>
+      <a href=""><?php echo $value['private_name'].' '. $value['family_name'];?></a>
     </div>
     <p>
         <?php echo $value['feddback'] ;?>
@@ -264,9 +275,11 @@ include('php/get_item_data.php');
   </div>
     
    <?php } ?>
+    </div> <!-- end reviewsDiv -->
     
 </section>
 
+ 
 <!-- Review modal -->
     <div id="review-modal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
       <div class="modal-header"><h4 class="text-center">Add a review</h4></div>
@@ -293,7 +306,7 @@ include('php/get_item_data.php');
       <a class="close-reveal-modal" aria-label="Close">&#215;</a>
     </div>
 <!-- Review modal -->
-
+ 
 <!-- check sign up modal -->
   <div id="reply-modal-check-sign" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <div class="modal-header"><h4 class="text-center">Add a review</h4></div>
@@ -313,7 +326,7 @@ include('php/get_item_data.php');
       </div>
     </div>
 <!-- check sign up modal -->
-
+ 
 <!-- sign up modal -->
     <div id="sign-up-modal" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
       <div class="modal-header"><h4 class="text-center">Sign Up</h4></div>
@@ -400,7 +413,8 @@ include('php/get_item_data.php');
       <a class="close-reveal-modal" aria-label="Close">&#215;</a>
       <div class="row modal-body">
         <div class="small-12 columns">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9722.245018162283!2d13.43526645!3d52.4689729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1483543819795" frameborder="0" width="100%" style="border:0" allowfullscreen></iframe>
+            <!-- google maps iframe -->
+          <?php echo urldecode($kindergarden['google_maps']);?> 
       </div>
     </div>
 <!-- place on map modal -->

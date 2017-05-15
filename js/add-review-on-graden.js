@@ -32,22 +32,36 @@ $( document ).ready(function() {
         if(inputVal.length){
             $.post("php/add_review.php", data).done(function(data){
                 // Display the returned data in browser
-                $('#review-modal').foundation('reveal', 'close');
+               
                 console.log('quick serch results');
                 console.log(data);
-                return;
-                var showResults = '<ul>';
-                $.each(data,function(index,obj){
-                    
-                    showResults += '<li><a href="item.php?id='+obj.id+'" data-sOBJ="'+index+'" data-DB-ID="'+obj.id+'"class="a-quickresults">' + obj.name + ' , ' + obj.city + ' , ' + obj.adress + '</a>' +'</li>';
-                    
-                });
-                showResults += '</ul>';
                 
-                resultDropdown.html(showResults);
+                reviewDiv = $('#reviewsDiv');
+                
+                if ( window.family_name === '') { window.family_name ='anonymous' ; }
+                
+               var html = '';
+               html += '<div class="single-review small-12 medium-8 columns end">';
+               html += '<div class="reviewer-details">';
+               html += '<img src="img/avatar/avatar3.jpg">';
+               html += '<a href="">'+ window.private_name+ ' '+window.family_name+'</a>';
+               html += '</div>';
+               html += ' <p>';
+               html += inputVal ;
+               html += '</p>';
+               html += '<div class="up-down-vote-container">';
+               html += '<a href=""><i class="fa fa-caret-up" aria-hidden="true"></i><span class="review-up-down-number">23</span></a>';
+               html += '<a href=""><i class="fa fa-caret-down" aria-hidden="true"></i><span class="review-up-down-number">3</span></a>';
+               html += '</div>';
+    
+                console.log(html);
+                reviewDiv.append(html);
+                
+                //close modal
+                 $('#review-modal').foundation('reveal', 'close');
             });
         } else{
-            resultDropdown.empty();
+           console.log ('error - no text found');
         }
         
     };

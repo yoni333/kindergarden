@@ -6,6 +6,7 @@ include('query.php');
 
 
 $name_of_inserter = $_SESSION['admin-name'];
+
 $tmp = [] ;
 $tmp[0] = true ;
 
@@ -17,9 +18,11 @@ $tmp[count($tmp)] = $_POST['country'];
 $tmp[count($tmp)] = $_POST['working_hours'];
 $tmp[count($tmp)] = $_POST['contact'];
 $tmp[count($tmp)] = $_POST['description'];
+$tmp[count($tmp)] = $_POST['google_maps'];
 $tmp[count($tmp)] = $name_of_inserter;
 $tmp[count($tmp)] = '0';
-
+ echo "<pre>";
+ print_r($tmp);
 $a= new query_admin();
 
 $a->set_insert_array( $tmp );

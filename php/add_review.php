@@ -3,13 +3,13 @@ session_start();
 
 include('main.php');
 
-print_r($_SESSION);
+//print_r($_SESSION);
 include('isLogin.php');
 
 
  include('database_users.php');
  
- print_r($_POST);
+ //print_r($_POST);
   
  
 class addReview {
@@ -62,7 +62,7 @@ class addReview {
                 . "  VALUES (:user_id,:kindergardenID,:text)";
         $stmt = $this->_dbh->prepare( $this->SQL );
             
-      echo $this->SQL;
+     // echo $this->SQL;
         
         $stmt->bindParam(':user_id',  $this->params['userID']);
       $stmt->bindParam(':kindergardenID',  $this->params['kindergardenID']);

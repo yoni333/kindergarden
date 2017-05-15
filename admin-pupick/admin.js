@@ -24,6 +24,7 @@ function insert_kindergarden_admin(){
     console.log ('insert_kindergarden_admin');
     
     var data = get_new_kindergarden( admin.dom.form );
+    data[5].value= encodeURIComponent(data[5].value);
    
    // ajax_admin_insert_kindergarden.php
    ;
@@ -145,7 +146,9 @@ function open_edit_gardem_modal( id ,row ){
    });
    
    data['id'] = data.sorting_1; //datatableJs insert the class sorting_1 instesd of 'id' - so we bring it back
-
+    
+    //decode uricompenent
+    data.google_maps = decodeURIComponent ( data.google_maps );
       console.log(data);
       
   
@@ -159,6 +162,7 @@ function open_edit_gardem_modal( id ,row ){
        $('#editGardenModal #admin_edit_working_hours').val(data.working_hours);
        $('#editGardenModal #admin_new_contact').val(data.contact);
        $('#editGardenModal #admin_edit_description').val(data.description);
+       $('#editGardenModal #admin_edit_google_maps').val(data.google_maps);
       
       
       
@@ -174,7 +178,7 @@ function edit_kindergarden_admin(){
    
    // ajax_admin_insert_kindergarden.php
   
-  
+   data[6].value= encodeURIComponent(data[6].value);
   
     var jqxhr = $.post(admin.url + "ajax_admin_edit_kindergarden.php",data )
   .done(function() {

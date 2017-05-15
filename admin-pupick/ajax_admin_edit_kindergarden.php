@@ -17,6 +17,7 @@ $tmp[count($tmp)] = $_POST['country'];
 $tmp[count($tmp)] = $_POST['working_hours'];
 $tmp[count($tmp)] = $_POST['contact'];
 $tmp[count($tmp)] = $_POST['description'];
+$tmp[count($tmp)] = $_POST['google_maps'];
 
 $tmp[count($tmp)] = '0'; //0 is admin id number
 $tmp[count($tmp)] = $_POST['id']; //0 is admin id number

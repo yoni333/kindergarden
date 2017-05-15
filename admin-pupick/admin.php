@@ -63,42 +63,10 @@ include('login_check.php');
       <h3>Listings</h3> <u><button href="#" data-reveal-id="myModal" class="btn btn-danger">insert new kindergarden</button></u>
     <table id="active_table_admin" >
       <thead>
-            <!--
-        <tr>
-          
-          <th width="200">Name</th>
-          <th width="200">Adress</th>
-          <th width="100">City</th>
-          <th width="100">Country</th>
-          <th width="200">Working hours</th>
-          <th width="200">Description</th>
-          <th width="150">Rating</th>
-          <th width="150">Avg. Rate</th>
-          <th width="150">Edit</th>
-          
-        </tr>
-              -->
+        
       </thead>
       <tbody>
-          <!--
-        <tr>
-          <td>Content Goes Here</td>
-          <td>porta gravida at eget metus.</td>
-          <td>Content Goes Here</td>
-          <td>Content Goes Here</td>
-          <td>Content Goes Here</td>
-          <td>Content Goes Here</td>
-          <td>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-          </td>
-          <td>4.5</td>
-          <td><a href="" class="grey-button"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp&nbspEdit</a></td>
-        </tr>
-          -->
+         
       </tbody>
     </table>
   </div>
@@ -122,6 +90,8 @@ include('login_check.php');
       <input type="text"  id="admin_new_country" name="country" >
       working hours:
       <input type="text" id="admin_new_working_hours"  name="working_hours" >
+      google maps location: (iframe)
+      <input type="text" id="admin_new_googleMaps"  name="google_maps" >
      kindergarden contant details:
       <input type="text" id="admin_new_contact"  name="contact" >
       description:
@@ -152,6 +122,8 @@ include('login_check.php');
       <input type="text"  id="admin_edit_country" name="country" >
       working hours:
       <input type="text" id="admin_edit_working_hours"  name="working_hours" >
+      google maps: (iframe)
+      <input type="text" id="admin_edit_google_maps"  name="google_maps" >
        kindergarden contant details:
       <input type="text" id="admin_new_contact"  name="contact" >
       description:

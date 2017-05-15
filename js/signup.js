@@ -83,10 +83,13 @@ function login_ajax(data){
             
             var page = window.location.pathname ;
             page = page.substring(page.lastIndexOf('/')+1);
+            
+            console.log('page = ' + page);
             switch (page){
                 
-                    case 'index.html':
-                        window.location.href = 'http://pupick.de/app-pupick/profile.php';
+                    case '':
+                    //    window.location.href = 'http://pupick.de/app-pupick/profile.php';
+                  
 
                   break;
 
@@ -96,6 +99,11 @@ function login_ajax(data){
                
             }
           
+             $('#login-modal').foundation('reveal', 'close');
+             $('#nav-sign-up').css('display', 'none');
+             $('#nav-login').css('display', 'none');
+             $('#nav-signout').css('display', 'block');
+             
         }else {
             
          alert ('Wrong Email or Password ');

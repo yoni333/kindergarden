@@ -4,7 +4,7 @@ session_start();
 include('main.php');
 include('database_world.php');
 
-
+//print_r($_SESSION);
 
 class full_item_data {
     
@@ -48,7 +48,9 @@ class full_item_data {
     public function get_reviews_list(){
         
         //TODO create join table with user id
-        $this->SQL = "SELECT * FROM feedbacks  WHERE kindergardem_id = '$this->insert_search';"  ;
+        $this->SQL = "SELECT feedbacks.user_id, feedbacks.kindergardem_id ,feedbacks.date_insert ,feedbacks.feddback, users.private_name ,users.family_name  FROM `feedbacks`
+INNER JOIN  users ON feedbacks.user_id=users.id where feedbacks.kindergardem_id ='$this->insert_search';";
+        
         
          try {
             /*** The SQL SELECT statement ***/
@@ -116,6 +118,8 @@ $kindergarden = $full_item_data->get_search_list();
 $reviews = $full_item_data->get_reviews_list();
 
 $full_item_data->close_db();
+
+//print_r($reviews);
 
 $kindergarden = $kindergarden[0];
 
