@@ -38,7 +38,7 @@ $( document ).ready(function() {
                 
                 reviewDiv = $('#reviewsDiv');
                 
-                if ( window.family_name === '') { window.family_name ='anonymous' ; }
+                if ( window.family_name === '') { window.family_name ='anonymous' ;  window.private_name='';}
                 
                var html = '';
                html += '<div class="single-review small-12 medium-8 columns end">';

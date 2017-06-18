@@ -47,7 +47,7 @@ class full_item_data {
     
     public function get_reviews_list(){
         
-        //TODO create join table with user id
+       
         $this->SQL = "SELECT feedbacks.user_id, feedbacks.kindergardem_id ,feedbacks.date_insert ,feedbacks.feddback, users.private_name ,users.family_name  FROM `feedbacks`
 INNER JOIN  users ON feedbacks.user_id=users.id where feedbacks.kindergardem_id ='$this->insert_search';";
         
@@ -87,7 +87,7 @@ INNER JOIN  users ON feedbacks.user_id=users.id where feedbacks.kindergardem_id 
         
         if ( !$valid) {
             
-            $newURL = 'http://pupick.de/app-pupick/index.html';
+            $newURL = 'http://pupick.de/app-pupick/index.php';
                 header('Location: '.$newURL);
               //  echo "you must insert string" ; 
             
@@ -119,12 +119,7 @@ $reviews = $full_item_data->get_reviews_list();
 
 $full_item_data->close_db();
 
-//print_r($reviews);
 
 $kindergarden = $kindergarden[0];
 
-/*
-header('Content-Type: application/json');
-        echo json_encode( $list );
- * 
- */
+//print_r($reviews);

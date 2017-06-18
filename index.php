@@ -31,9 +31,11 @@
         <li><a class="but" href="review.html">Review a kita</a></li>
        
          <?php if ($_SESSION['isLogin']  !== 'login' ){ ?>
-        <li><a data-reveal-id="sign-up-modal" id="nav-sign-up" href="">Sign Up</a></li>
-        <li><a data-reveal-id="login-modal" id="nav-login" href=""><i class="fa fa-user" aria-hidden="true"></i>&nbsp Login</a></li>
+        
+        <li class="nav-sign-up"><a data-reveal-id="sign-up-modal" id="nav-sign-up" href="">Sign Up</a></li>
+        <li class="nav-login"><a data-reveal-id="login-modal" id="nav-login" href=""><i class="fa fa-user" aria-hidden="true"></i>&nbsp Login</a></li>
          <li id="nav-signout" style="display:none;"><a  href="php/signout.php">SignOut</a></li>
+         
         <?php } else { ?>
          <li id="nav-signout"><a  href="php/signout.php">SignOut</a></li>
         <?php } ?>
@@ -96,12 +98,14 @@
         <div class="small-12 columns">
           <h4 class="text-center">Choose a method to sign up:</h4>
           <a href="" data-reveal-id="sign-with-mail" class="grey-button bl" id="">Sign with mail</a>
+          <!--
           <br>
           <a href="" data-reveal-id="reply-modal" class="grey-button bl" id="sign-with-google">
             <i class="fa fa-google" aria-hidden="true"></i>Sign with with google</a>
           <br>
           <a href="" data-reveal-id="reply-modal" class="grey-button bl" id="sign-with-facebook">
             <i class="fa fa-facebook" aria-hidden="true"></i>Sign with with facebook</a>
+            -->
         </div>
       </div>
     </div>

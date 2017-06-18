@@ -81,10 +81,13 @@ class newAccount {
             require 'PHPMailer-master/PHPMailerAutoload.php';
             $mail = new PHPMailer;
             $mail->SMTPDebug = 0; 
+            $mail->IsHTML(true);
             $mail->setFrom('doNotReplay@pupick.com', 'Ori Cohen');
             $mail->addAddress($this->params['email'], $name );
             $mail->Subject  = 'Welcome To pupic';
-            $mail->Body     = 'Hi'. $name .'! welcome to pupick .please press on the link to aproove your subscribe';
+            $mail->Body     = 'Hi '. $name .'! ';
+            $mail->Body     .= ' <br> welcome to pupick .';
+            $mail->Body     .= 'visit out site at any time <a href="http://pupick.de/app-pupick/index.php">pupick</a>';
             if(!$mail->send()) {
               echo 'Message was not sent.';
               echo 'Mailer error: ' . $mail->ErrorInfo;

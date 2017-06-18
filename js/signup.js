@@ -53,7 +53,10 @@ function signup_ajax(data){
       if ( response === 'insert'){
          
          alert ('You have new Account now ');
-         
+          $('#sign-with-mail').foundation('reveal', 'close');
+             $('.nav-sign-up').css('display', 'none');
+             $('.nav-login').css('display', 'none');
+             $('#nav-signout').css('display', 'block');
      }
    
   })
