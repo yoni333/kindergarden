@@ -17,7 +17,7 @@
   <nav class="top-bar row" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1 class="logo"><a href="index.html"><img src="img/logo.png"></a></h1>
+        <h1 class="logo"><a href="index.php"><img src="img/logo.png"></a></h1>
       </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -26,7 +26,7 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li><a class="" href="admin.html">Admin</a></li>
+        <li><a class="" href="admin-pupick/index.php">Admin</a></li>
         <li><a class="" href="profile.html">Profile</a></li>
         <li><a class="but" href="review.html">Review a kita</a></li>
        
@@ -172,6 +172,7 @@
     <script src="js/world_docReady.js"></script>
     <script src="js/quick_search.js"></script>
     <script src="js/signup.js"></script>
+    <script src="lib/avatar/initial.min.js"></script>
     <script>
       $(document).foundation();
     </script>

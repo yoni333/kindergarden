@@ -8,6 +8,7 @@ include('php/get_item_data.php');
 
 
 //print_r($kindergarden);
+//print_r($_SESSION);
 ?>
 
 
@@ -25,7 +26,8 @@ include('php/get_item_data.php');
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-         window.user_id = <?php echo $_SESSION['userID'] ;?>;
+       
+         window.user_id = <?php echo (isset($_SESSION['userID']) && !empty($_SESSION['userID'])) ? $_SESSION['userID']:'anonymous' ;?>;
          window.private_name = '<?php echo $_SESSION['private_name'] ;?>';
          window.family_name = '<?php echo $_SESSION['family_name'] ;?>';
     </script>
@@ -36,7 +38,7 @@ include('php/get_item_data.php');
   <nav class="top-bar row" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1 class="logo"><a href="index.html"><img src="img/logo.png"></a></h1>
+        <h1 class="logo"><a href="index.php"><img src="img/logo.png"></a></h1>
       </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -45,7 +47,7 @@ include('php/get_item_data.php');
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li><a class="" href="admin.html">Admin</a></li>
+        <li><a class="" href="admin-pupick/admin.php">Admin</a></li>
         <li><a class="" href="profile.html">Profile</a></li>
         <li><a class="but" href="review.html">Review a kita</a></li>
         <?php if ($_SESSION['isLogin']  !== 'login' ){ ?>
@@ -256,7 +258,8 @@ include('php/get_item_data.php');
     
   <div class="single-review small-12 medium-8 columns end">
     <div class="reviewer-details">
-      <img src="img/avatar/avatar3.jpg">
+     <!-- <img src="img/avatar/avatar3.jpg">-->
+      <img data-name="<?php echo $value['private_name'].' '. $value['family_name'];?>" class="profileAvatarLib"/> <!-- we use this calss name fo avatar lib -->
       <a href=""><?php echo $value['private_name'].' '. $value['family_name'];?></a>
     </div>
     <p>
@@ -428,6 +431,19 @@ include('php/get_item_data.php');
     
       <script src="js/signup.js"></script>
     <script src="js/add-review-on-graden.js"></script>
+     <script src="lib/avatar/initial.min.js"></script>
+     
+     <script>
+         $(document).ready(function(){
+             
+              $('.profileAvatarLib').initial({width:32,height:32,fontSize:16,charCount:2});
+     
+             
+             
+         });
+    
+     </script>
+     
   </body>
 </html>
 

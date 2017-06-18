@@ -43,8 +43,8 @@ $( document ).ready(function() {
                var html = '';
                html += '<div class="single-review small-12 medium-8 columns end">';
                html += '<div class="reviewer-details">';
-               html += '<img src="img/avatar/avatar3.jpg">';
-               html += '<a href="">'+ window.private_name+ ' '+window.family_name+'</a>';
+               html += '<img class="profileAvatarLib" data-name="'+window.private_name+' '+window.family_name+'">';
+               html += '<a href="">'+ window.private_name + ' ' + window.family_name+'</a>';
                html += '</div>';
                html += ' <p>';
                html += inputVal ;
@@ -56,7 +56,7 @@ $( document ).ready(function() {
     
                 console.log(html);
                 reviewDiv.append(html);
-                
+                 $('.profileAvatarLib').initial({width:32,height:32,fontSize:16,charCount:2});
                 //close modal
                  $('#review-modal').foundation('reveal', 'close');
             });

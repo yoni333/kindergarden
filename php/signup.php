@@ -73,9 +73,34 @@ class newAccount {
         
     }
     
+    function send_verification_mail(){
+      //TODO add verfication link
+        if ( empty($this->results)){ //only if the result from check emlail duplicate is zero
+            
+           $name = $this->params['private_name'].' ' . $this->params['family_name'];
+            require 'PHPMailer-master/PHPMailerAutoload.php';
+            $mail = new PHPMailer;
+            $mail->SMTPDebug = 0; 
+            $mail->setFrom('doNotReplay@pupick.com', 'Ori Cohen');
+            $mail->addAddress($this->params['email'], $name );
+            $mail->Subject  = 'Welcome To pupic';
+            $mail->Body     = 'Hi'. $name .'! welcome to pupick .please press on the link to aproove your subscribe';
+            if(!$mail->send()) {
+              echo 'Message was not sent.';
+              echo 'Mailer error: ' . $mail->ErrorInfo;
+            } else {
+            //  echo 'Message has been sent.';
+            }
+
+
+        }
+
+
+    }
+    
     function insert_query(){
         
-        if ( empty($this->results)){
+        if ( empty($this->results)){ //only if the result from check emlail duplicate is zero
             
              try {
                  
@@ -133,7 +158,7 @@ $newAccount = new newAccount();
 $newAccount->get_params();
 $newAccount->check_email_duplicate();
 $newAccount->insert_query();
-
+$newAccount->send_verification_mail();
 $newAccount->close_db();
 $response = $newAccount->get_response();
 
